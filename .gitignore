@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+data/cifar-10-python.tar.gz
+data/cifar-10-batches-py/
+models/*.pth
+models/*.pt
+demo.sqlite3
