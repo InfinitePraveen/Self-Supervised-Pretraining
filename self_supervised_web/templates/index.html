@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ project_name }}</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<main class="page">
+<section class="hero">
+<p class="eyebrow">DATA SCIENCE PROJECT</p>
+<h1>{{ project_name }}</h1>
+<p class="lead">Learning useful image representations without class labels using contrastive learning.</p>
+<div class="buttons">
+<a href="https://github.com/InfinitePraveen" target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/infinitepraveen/" target="_blank">LinkedIn</a>
+</div>
+</section>
+<section class="grid">
+<article class="card"><span>01</span><h2>Two views</h2><p>The same image is randomly augmented twice to form a positive pair.</p></article>
+<article class="card"><span>02</span><h2>Encoder</h2><p>A compact CNN converts each augmented view into a vector representation.</p></article>
+<article class="card"><span>03</span><h2>Contrast</h2><p>NT-Xent loss pulls positive pairs together and separates other samples.</p></article>
+<article class="card"><span>04</span><h2>Reuse</h2><p>The learned encoder can provide embeddings for retrieval and downstream tasks.</p></article>
+</section>
+<section class="card workflow">
+<h2>Project Configuration</h2>
+<div class="facts">
+<div><strong>Method</strong><span>{{ method }}</span></div>
+<div><strong>Dataset</strong><span>{{ dataset }}</span></div>
+<div><strong>Hardware</strong><span>CPU-friendly</span></div>
+<div><strong>Implementation</strong><span>Notebook + Django</span></div>
+</div>
+</section>
+<footer>Built as a practical self-supervised learning portfolio project.</footer>
+</main>
+</body>
+</html>
